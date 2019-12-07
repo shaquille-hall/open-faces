@@ -1,0 +1,16 @@
+<p class="headlineText"> Your Data </p>
+<app-node *ngFor="let node of nodes" [node]="node" 
+	(mineNodeBool)="onMine($event)"
+	(updateNodeBool)="onUpdate($event)">
+</app-node>
+<app-node *ngIf="displayEmptyNodeBool"
+	(mineNodeBool)="onMine($event)"
+	(updateNodeBool)="onUpdate($event)">
+</app-node>
+<button (click)="addNode()"> Add Node </button>
+
+<p class="headlineText" *ngIf="peerNodes"> Peer Nodes </p>
+<app-node *ngFor="let node of peerNodes" [node]="node"  
+	(mineNodeBool)="onMine($event)"
+	(updateNodeBool)="onUpdate($event)">
+</app-node>

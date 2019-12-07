@@ -1,0 +1,38 @@
+.passing {
+	background-color : #33cc33;
+	width: 70%;
+	padding-left: 4%;
+}
+
+.failing {
+	background-color : #ff6666;
+	width: 70%;
+	padding-left: 4%;
+}
+
+.normalText {
+	padding: 10px;
+}
+
+.dataInputTextArea {
+	height: 150px;
+	width: 90%;
+	resize: none;
+}
+
+.dataTitle {
+	vertical-align: text-top;
+}
+
+.wideInput {
+	width: 90%;
+}
+
+.mineButton {
+	margin: 15px;
+}
+
+@media screen and (max-width: 400px) {
+	.passing { width: 90% }	
+
+}

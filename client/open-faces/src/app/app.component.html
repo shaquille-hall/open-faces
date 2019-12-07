@@ -1,0 +1,7 @@
+<p class="title"> {{ title }} </p>
+<button 
+	*ngIf="!displayBlockchain"
+	(click)="createNewBlockchain()"> 
+		{{ customBlockchainButtonText }} 
+</button>
+<app-blockchain *ngIf="displayBlockchain"></app-blockchain>

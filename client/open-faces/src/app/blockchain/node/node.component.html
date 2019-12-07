@@ -1,0 +1,29 @@
+<div [className] = "this.node.IsValid ? 'passing' : 'failing'" *ngIf="node"> 
+	<p class="normalText"> 
+			Idx: <br />
+			<input class="wideInput" [ngModel]="this.node.Idx" disabled>  
+	</p>
+	<p class="normalText"> 
+			Nonce: <br /> 
+			<input class="wideInput" [ngModel]="this.node.Nonce" disabled> 
+	</p>
+	<p class="normalText"> 
+		Data: <br />
+		<textarea class="dataTitle dataInputTextArea" 
+							id="nodeInfo" 
+							[(ngModel)]="this.node.Data" 
+							(keyup.enter)="update($event)" matInput>
+		</textarea>
+	</p>
+	<p class="normalText"> 
+			PrevHash: <br />
+			<input class="wideInput" [ngModel]="this.node.HashOfPrev" disabled>
+  </p>
+	<p class="normalText"> 
+		Hash: <br />
+		<input class="wideInput" [ngModel]="this.node.Hash" disabled> 
+	</p>
+
+	<button class="mineButton" (click)="mine()"> Mine Node </button>
+	<button *ngIf="isMobile" (click)="update($event)"> Update </button>
+</div>
